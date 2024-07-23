@@ -1,0 +1,1 @@
+# clinic_manage_app
