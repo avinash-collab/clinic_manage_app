@@ -1,0 +1,79 @@
+
+/* styles/App.css */
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9; /* Light grey background for the entire app */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard {
+  margin-top: 5rem; /* Ensure content is below the fixed Navbar */
+  padding: 2rem;
+}
+
+.dashboard > div {
+  margin-bottom: 2rem;
+}
+
+.dashboard .appointments, .dashboard .medical-records, .dashboard .notifications {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard th, .dashboard td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.dashboard th {
+  background: #3498db;
+  color: white;
+}
+
+.dashboard td {
+  background: #f9f9f9;
+}
+
+.dashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard ul li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+}
+
+.dashboard ul li:last-child {
+  margin-bottom: 0;
+}
+
+button {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button.primary {
+  background-color: #3498db;
+}
+
+button.primary:hover {
+  background-color: #2980b9;
+}

@@ -1,0 +1,123 @@
+/* src/styles/DoctorForm.css */
+/* src/styles/main.css */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("C:\Users\DELL\OneDrive\Desktop\my-clinic-app-main (2)\my-clinic-app-main\clinic-management-system-frontend\src\components\very-minimal-abstract-4k-2o-1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Ensure no overflow on the container */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%; /* Adjust width to fit smaller screens */
+    max-width: 400px; /* Ensure the form does not exceed a reasonable width */
+    max-height: 90vh; /* Ensure the form does not exceed viewport height */
+    overflow-y: auto; /* Enable scrolling if the form content exceeds max height */
+
+    /* Add box-shadow */
+    box-shadow: 
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.017),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.024),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.03),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.036),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.043),
+        100px 100px 80px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Aesthetic and minimalistic scroll bar */
+form::-webkit-scrollbar {
+    width: 8px;
+}
+
+form::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 5px;
+}
+
+form::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px;
+}
+
+form::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* Header styling */
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-icon {
+    cursor: pointer;
+    color: #888;
+    font-size: 1.5rem;
+}
+
+.back-icon:hover {
+    color: #555;
+}
+
+button {
+    margin-top: 1rem;
+}
+
+.signup-button {
+    background-color: #007BFF;
+    color: white;
+}
+
+.signup-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button {
+    margin-top: 0px;
+    background-color: #ccc;
+    color: white;
+}
+
+.back-button:hover {
+    background-color: #999;
+}
+
+/* src/styles/App.css */
+.form-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.form-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.form-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 300ms, transform 300ms;
+}

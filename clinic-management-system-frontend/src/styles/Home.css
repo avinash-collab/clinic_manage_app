@@ -1,0 +1,98 @@
+/* Home.css */
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../images/image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-content {
+    text-align: center;
+    color: rgb(20, 17, 17);
+    position: relative; /* Ensure the button is positioned correctly */
+  }
+  
+  .home-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .home-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Ensure the form appears above everything */
+  .book-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark background to overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .book-form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Keeps the form in the correct position */
+  }
+  
+  .book-form-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .book-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-form-container label {
+    margin-bottom: 10px;
+  }
+  
+  .book-form-container input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .book-form-container button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .book-form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .book-form-container button[type="button"] {
+    background-color: #dc3545;
+  }
+  
+  .book-form-container button[type="button"]:hover {
+    background-color: #c82333;
+  }
+  
