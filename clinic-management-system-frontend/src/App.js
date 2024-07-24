@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -9,8 +8,6 @@ import AuthBox from './components/AuthBox';
 import Home from './components/Home'; 
 import Logout from './components/Logout';
 import Footer from './components/Footer';
-
-
 
 function App() {
   const [showAuthBox, setShowAuthBox] = useState(false);
@@ -27,6 +24,12 @@ function App() {
   const handleAuthBoxClose = () => {
     setShowAuthBox(false);
     setCurrentView('home'); // Return to home or any default view
+  };
+
+  // Handle successful login
+  const handleLoginSuccess = () => {
+    setShowAuthBox(false);
+    setCurrentView('home'); // Redirect to home or any desired view after login
   };
 
   // Handle navigation clicks
@@ -52,7 +55,7 @@ function App() {
   // Render current component based on state
   const renderComponent = () => {
     if (showAuthBox) {
-      return <AuthBox onClose={handleAuthBoxClose} />;
+      return <AuthBox onClose={handleAuthBoxClose} onLoginSuccess={handleLoginSuccess} />;
     }
 
     switch (currentView) {

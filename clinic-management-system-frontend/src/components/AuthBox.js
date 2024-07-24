@@ -1,9 +1,8 @@
-// AuthBox.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { CSSTransition } from 'react-transition-group';
 import PatientForm from './PatientForm';
-import DoctorForm from './DoctorForm';
+import BookForm from './DoctorForm'; // Update import to BookForm
 import '../styles/AuthBox.css';
 import patientImage from './Screenshot 2024-07-18 083000.png';
 import doctorImage from './Screenshot 2024-07-18 083038.png';
@@ -36,15 +35,14 @@ const AuthBox = ({ onClose }) => {
       });
   
       console.log('Login successful:', response.data);
-      // Use response data (e.g., storing the token in local storage)
       localStorage.setItem('token', response.data.token);
-      setLoginError(''); // Clear error on successful login
+      setLoginError('');
+      onClose(true); // Notify successful login
     } catch (error) {
-      console.log('Error response:', error.response); // Log error response
+      console.log('Error response:', error.response);
       setLoginError(error.response?.data.message || 'Login failed');
     }
   };
-  
 
   return (
     <div className="container">
@@ -109,7 +107,7 @@ const AuthBox = ({ onClose }) => {
               classNames="form"
               unmountOnExit
             >
-              <DoctorForm goBack={handleGoBack} />
+              <BookForm goBack={handleGoBack} /> {/* Update to BookForm */}
             </CSSTransition>
           </>
         )}
